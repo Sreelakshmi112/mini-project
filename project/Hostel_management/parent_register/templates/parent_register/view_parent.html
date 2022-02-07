@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+{% extends 'temp/admin.html' %}
+{% block base %}
+<body>
+	<h2 align="center">PARENT DETAILS</h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>ID</td>
+			<td>NAME</td>
+			<td>ADDRESS</td>
+			<td>CONTACT_NO</td>
+			<td>STUDENT_ID</td>
+			<td>CITY</td>
+			<td> PINCODE</td>
+			<td>E-MAIL</td>
+		</tr>
+         {% for i in value %}
+		<tr>
+			<td>{{ i.id }}</td>
+			<td>{{ i.name }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.phone_no }}</td>
+			<td>{{ i.s_id }}</td>
+			<td>{{ i.city }}</td>
+			<td>{{ i.pincode }}</td>
+			<td>{{ i.e_mail }}</td>
+		</tr>
+    {% endfor %}
+	</TABLE>
+{% endblock %}
+</body>
+</html>

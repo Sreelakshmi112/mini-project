@@ -1,0 +1,28 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">FOOD DETAILS</h2>
+	<TABLE align="center" border="1">
+
+		<tr>
+			
+			<td>DAYS</td>
+			<td>BREAKFAST(7:00-9:00)</td>
+			<td>LUNCH(12:00-2:00</td>
+            <td>DINNER(8:00-9:30)</td>
+			
+		</tr>
+         {% for i in value %}
+		<tr>
+			
+			<td>{{ i.day }}</td>
+			<td>{{ i.breakfast }}</td>
+			<td>{{ i.lunch }}</td>
+            <td>{{ i.dinner }}</td>
+			
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+{% endblock %}

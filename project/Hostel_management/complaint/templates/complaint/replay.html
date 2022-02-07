@@ -1,0 +1,28 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+{#<body bgcolor="#5f9ea0">#}
+	<h1 align="center">REPLAY </h1>
+	<table align="center" >
+        <form method="post">
+            {% csrf_token %}
+{#		<tr>#}
+{#			<td>COMPLAINT:</td>#}
+{#                        {% for i in val %}#}
+{##}
+{#			<td><input type="text" name="cmp" value="{{ i.complaint }}"></td>#}
+{#                        {% endfor %}#}
+
+		</tr>
+		<tr>
+			<td>REPLAY:</td>
+			<td><input type="text" name="rep"></td>
+		</tr>
+		
+		<tr><td>
+			<td align="center"><input type="submit" name="log" value="add"></td>
+			
+		 </tr>
+    </form>
+	</table>
+{% endblock %}

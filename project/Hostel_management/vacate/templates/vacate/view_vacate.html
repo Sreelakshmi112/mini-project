@@ -1,0 +1,24 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<body>
+	<h2 align="center">VACATE DETAILS</h2>
+	<TABLE align="center" border="1">
+		<tr>
+            <td>ID</td>
+			<td>DATE</td>
+			<td>S_ID</td>
+			<td>STATUS</td>
+			
+		</tr>
+         {% for i in value %}
+		<tr>
+        <td>{{ i.id }}</td>
+			<td>{{ i.date }}</td>
+			<td>{{ i.s_id }}</td>
+			<td>{{ i.status }}</td>
+            <td><a href="{% url 'vacated' id=i.id %}">Vacated</a> </td>
+			
+		</tr>
+        {% endfor %}
+	</TABLE>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<body bgcolor="#5f9ea0">
+<form method="post">
+    {% csrf_token %}
+	<table align="center" cellpadding="10">
+		<h2 ><center> POST ATTENDANCE </center></h2>
+        <tr>
+			<td> MONTH:</td>
+			<td> <input type="text" name="mnth"></td>
+		</tr>
+
+		<tr>
+			<td> TOTAL_DAYS:</td>
+			<td> <input type="text" name="tday"></td>
+		</tr>
+
+		<tr>
+			<td> PRESENT_DAYS:</td>
+			<td> <input type="text" name="pday"></td>
+		</tr>
+
+
+		<tr>
+			<td align="center">
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				&nbsp&nbsp&nbsp&nbsp&nbsp<input type="SUBMIT" name="submit">
+			</td>
+		</tr>
+
+</form>
+
+	</table>
+</body>
+ {% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<body bgcolor="#5f9ea0">
+<table align="center" cellpadding="10">
+    <form method="post">
+         {% csrf_token %}
+	<h2 ><center> POST FEES </center></h2>
+		<tr>
+			<td> DAYS:
+			<select name="day">
+			<option>...SELECT..</option>
+			<option>1 day</option>
+			<option>15 day</option>
+			<option>30 day</option>
+			<option>6 month</option>
+			<option>1 year</option>
+		</select> </td>
+
+		</tr>
+
+		<tr>
+			<td> FEES:
+			<input type="text" name="fee"></td>
+		</tr>
+	
+	<tr>
+			<td align="center"><input type="SUBMIT" name="fees" value="SUBMIT">
+			
+		 </tr>
+    </form>
+</table>
+{% endblock %}

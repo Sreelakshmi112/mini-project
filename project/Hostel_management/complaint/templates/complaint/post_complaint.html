@@ -1,0 +1,20 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<body bgcolor="#5f9ea0" >
+	<h2 align="center" > POST COMPLAINT</h2>
+	<table cellpadding="10" align="center">
+        <form method="post">
+            {% csrf_token %}
+		<tr>
+			<td> COMPLAINT:</td>
+			<td><textarea name="cmp"> </textarea></td>
+			<tr>
+			<td><input type="submit" name="submit"></td></tr>
+		</tr>
+            </form>
+		
+	</table>
+
+
+{% endblock %}

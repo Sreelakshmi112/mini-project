@@ -1,0 +1,87 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+<body bgcolor="#5f9ea0">
+<h1 align="center">Registration</h1>
+
+<table align="center" cellpadding="10">
+    <form method="post">
+        {% csrf_token %}
+        <tr>
+		<td align="center"> ID </td>
+		<td > <input type="text" name="id"> </td>
+	</tr>
+
+	<tr> 
+		<td align="center"> NAME </td>
+		<td > <input type="text" name="name" required> </td>
+	</tr>
+
+		   <tr>
+			<td align="center"> GENDER </td>
+		<td > <input type="radio" name="gender" value="Male" required>Male
+		  <input type="radio" name="gen" value="Female" required> Female</td>
+		</tr>
+
+         <tr>
+	    	<td align="center"> DEPARTMENT</td>
+		<td > <input type="text" name="dep" required></td>
+	</tr>
+        <tr>
+			<td align="center"> ADDRESS </td>
+       <td ><textarea name="address" required> </textarea></td>
+   </tr>
+<tr>
+	<td align="center">CITY</td>
+	<td>
+		<select name="city" required>
+			<option>...SELECT..</option>
+			<option value="Thiruvanandhapuram"> Thiruvanandhapuram </option>
+			<option value="Thiruvanandhapuram">kollam</option>
+			<option value="pathanamthitta">pathanamthitta </option>
+			<option value="Aalapuzha">Aalapuzha </option>
+			<option value="kottayam ">kottayam </option>
+			<option value="Idukki">Idukki</option>
+			<option value="Eranamkulam">Eranamkulam </option>
+			<option value="Thrissur">Thrissur </option>
+			<option value="Palakkadu">Palakkadu</option>
+			<option value="kozhikode">kozhikode </option>
+			<option value="Wayanad">Wayanad </option>
+			<option value="kannur">kannur </option>
+			<option value="kasargod">kasargod</option>
+		</select>
+	</td>
+</tr>
+ 
+ <tr>
+	<td align="center"> PINCODE</td>
+
+		<td> <input type="text" name="pin" required>
+	</td>
+</tr>
+ <tr>
+			<td align="center"> CONTACT_NO </td>
+		<td > <input type="text" name="c_no" required> </td>
+	</tr>
+
+   <tr>
+   	<td align="center">PARENT_ID </td>
+   	<td > <input type="text" name="guardian" required>  </td>
+   </tr>
+
+   	<td align="center"> EMAIL_ID </td>
+		<td > <input type="email" name="mail" required> </td>
+	</tr>
+		<tr>
+			<td align="center"> PASSWORD</td>
+		<td > <input type="Password" name="pw" required> </td>
+	</tr>
+
+
+			<td align="center"><input type="submit" name="reg" value="REGISTRATION">
+{#			<a href="login.html" >LOGIN </a> </td>#}
+		 </tr>
+            </td>
+       </tr>
+    </form>
+</table>
+{% endblock %}

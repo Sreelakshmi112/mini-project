@@ -1,0 +1,106 @@
+{% extends 'temp/login.html' %}
+{% block base %}
+
+<body bgcolor="#5f9ea0">
+<h1 align="center">Registration</h1>
+
+<table align="center" cellpadding="10">
+    <form method="post">
+        {% csrf_token %}
+	<tr> 
+		<td align="center">PARENT NAME </td>
+		<td > <input type="text" name="pname"> </td>
+	</tr>
+        <tr>
+		<td align="center">STUDENT NAME </td>
+		<td > <input type="text" name="name"> </td>
+	</tr>
+
+        <tr>
+			<td align="center">STUDENT_GENDER </td>
+		<td > <input type="radio" name="gender" value="Male">Male
+		  <input type="radio" name="gender" value="Female"> Female</td>
+		</tr>
+
+         <tr>
+		<td align="center">DEPARTMENT</td>
+		<td > <input type="text" name="dep"> </td>
+	</tr>
+
+		<tr> 
+			<td align="center"> ADDRESS </td> 
+       <td ><textarea name="address"> </textarea></td>
+   </tr> 
+<tr>
+	<td align="center">CITY</td>
+	<td>
+		<select name="city">
+			<option >...SELECT..</option>
+			<option value="Thiruvanandhapuram"> Thiruvanandhapuram </option>
+			<option value="Thiruvanandhapuram">kollam</option>
+			<option value="pathanamthitta">pathanamthitta </option>
+			<option value="Aalapuzha">Aalapuzha </option>
+			<option value="kottayam ">kottayam </option>
+			<option value="Idukki">Idukki</option>
+			<option value="Eranamkulam">Eranamkulam </option>
+			<option value="Thrissur">Thrissur </option>
+			<option value="Palakkadu">Palakkadu</option>
+			<option value="kozhikode">kozhikode </option>
+			<option value="Wayanad">Wayanad </option>
+			<option value="kannur">kannur </option>
+			<option value="kasargod">kasargod</option>
+		</select>
+	</td>
+</tr>
+ 
+ <tr>
+	<td align="center"> PINCODE</td>
+
+		<td> <input type="text" name="pin">
+	</td>
+</tr>
+
+   
+
+{#   <tr>#}
+{#   	<td align="center">Student_ID  </td>#}
+{#   	<td > <input type="text" name="child_id">  </td>#}
+{#   </tr>#}
+
+   
+
+        <tr> 
+			<td align="center"> PARENT_CONTACT_NO: </td>
+		<td > <input type="text" name="p_no"> </td>
+	</tr>
+		 <tr>
+			<td align="center"> STUDENT_CONTACT_NO:</td>
+		<td > <input type="text" name="s_no"> </td>
+	</tr>
+
+		<tr>
+			<td align="center">PARENT_EMAIL_ID:</td>
+		<td > <input type="email" name="pmail"> </td>
+	</tr>
+        <tr>
+			<td align="center">STUDENT_EMAIL_ID:</td>
+		<td > <input type="email" name="smail"> </td>
+	</tr>
+		
+		<tr>
+			<td align="center"> PASSWORD</td>
+		<td > <input type="Password" name="pw"> </td>
+	</tr>
+
+	
+	
+
+		<tr>
+			<td align="center"><input type="SUBMIT" name="reg" value="REGISTRATION">
+{# 			<a href="login.html" >LOGIN </a> </td>#}
+		 </tr>
+		
+       </tr>
+    </form>
+</table>
+{% endblock %}

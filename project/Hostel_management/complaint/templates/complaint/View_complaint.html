@@ -1,0 +1,25 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">COMPLAINTS</h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>ID</td>
+			<td>USER_ID</td>
+			<td>COMPLAINT</td>
+
+			<td></td>
+		</tr>
+         {% for i in value %}
+		<tr>
+			<td>{{ i.c_id }}</td>
+			<td>{{ i.student.name }}</td>
+			<td>{{ i.complaint }}</td>
+			<td><a href="{% url 'cmp_reply' idd=i.c_id %}">REPLY</a></td>
+			
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+{% endblock %}

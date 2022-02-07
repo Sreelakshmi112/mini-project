@@ -1,0 +1,23 @@
+{% extends 'temp/parent.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">RENT DETAILS</h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>ID</td>
+			<td>DAYS</td>
+			<td>FEES</td>
+			
+		</tr>
+        {% for i in value %}
+		<tr>
+			<td>{{ i.id }}</td>
+			<td>{{ i.days }}</td>
+        <td>{{ i.fees }}</td>
+			
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+{% endblock %}

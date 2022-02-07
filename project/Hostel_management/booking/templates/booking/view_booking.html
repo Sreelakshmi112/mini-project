@@ -1,0 +1,27 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">BOOKING </h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>ROOM_ID</td>
+			<td>BOOKING_DATE</td>
+			<td> S_ID</td>
+			<td>STATUS</td>
+			
+		</tr>
+        {% for i in value %}
+		<tr>
+			<td>{{ i.id }}</td>
+			<td> {{ i.date }}</td>
+			<td>{{ i.s.name}}</td>
+			<td>{{i.status  }}</td>
+        <td><a href="{% url 'accept' idd=i.id %}">Accept</a> </td>
+        <td><a href="{% url 'reject' idd=i.id %}">Reject</a> </td>
+			
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">STAFF DETAILS</h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>ID</td>
+			<td>STAFF_NAME</td>
+			<td>PHONE_NO</td>
+			<td>JOB_TYPE</td>
+		</tr>
+       {% for i in value %}
+		<tr>
+			<td>{{i.id}}</td>
+			<td>{{ i.staff_name }}</td>
+			<td>{{ i.phone_no }}</td>
+			<td>{{ i.job_type }}</td>
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+</body>
+{% endblock %}
+</html>

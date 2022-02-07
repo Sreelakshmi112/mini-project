@@ -1,0 +1,30 @@
+{% extends 'temp/login.html' %}
+{% block base %}
+
+<body bgcolor="#5f9ea0">
+	<h1 align="center">LOGIN</h1>
+	<table align="center" cellpadding="10">
+        <form method="post">
+
+            {% csrf_token %}
+		<tr>
+			
+		<td height="40">UserName:  </td>
+		<td height="40"><input type="text" name="name" required class="form-control"></td>
+		</tr>
+            <tr>
+		<td height="40">Password:</td>
+		<td height="40"><input type="Password" name="pwd" required class="form-control"></td>
+            </tr>
+            <td></td>
+
+
+		<td align="center"> <input type="submit"  name="log" class="btn btn-success" value="LOGIN">
+{#		<td><a href="Registration.html" > signup _student</a></td>#}
+{#		<td><a href="Registration_parent.html" > signup _parent</a></td>#}
+{#      <td>  <a href="forgot_pw.html" > forgot_password</a></td>#}
+	</td>
+</tr>
+            </form>
+	</table>
+{% endblock %}

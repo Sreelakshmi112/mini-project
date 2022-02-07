@@ -1,0 +1,21 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">REPLY</h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>COMPLAINT</td>
+			<td>REPLAY</td>
+			
+			
+		</tr>
+         {% for i in value %}
+		<tr>
+			<td>{{ i.complaint }}</td>
+			<td>{{ i.reply }}</td>
+			
+		</tr>
+        {% endfor %}
+	</TABLE>
+{% endblock %}

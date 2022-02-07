@@ -1,0 +1,69 @@
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<body bgcolor="#5f9ea0">
+	<h2 align="center"> FOOD MENU</h2>
+	<table align="center">
+        <form method="post">
+            {% csrf_token %}
+		<tr>
+			<td> DAYS:</td>
+			<td>
+				<select name="day">
+                    <option value="">------select-------</option>
+					<option>Monday</option>
+					<option>Tuesday</option>
+					<option>Wenesday</option>
+					<option>Thursday</option>
+					<option>Friday</option>
+					<option>Saturday</option>
+					<option>Sunday</option>
+				</select>
+			</td>
+        <tr>
+        <td>BREAKFAST(7:00-9:00)</td>
+        <td>
+				<select name="BF">
+                    <option value="">------select-------</option>
+					<option>PUTTU+VEG CURRY</option>
+					<option>IDALI+CHATTNI</option>
+					<option>PURI+BAGI</option>
+					<option>DOSHA+SAMBAR</option>
+					<option>APPAM+VEG/NON VEG CURRY</option>
+				</select>
+			</td>
+            <tr>
+         <td>LUNCH(12:00-2:00)</td>
+            <td>
+				<select name="LU">
+                    <option value="">------select-------</option>
+					<option>MEALS</option>
+					<option>MEALS</option>
+					<option>MEALS</option>
+					<option>MEALS</option>
+					<option>Friday</option>
+					<option>BIRIYANI(VEG/NON)</option>
+
+				</select>
+			</td>
+         <tr>
+            <td>DINNER(8:00-9:30)</td>
+            <td>
+				<select name="DI">
+                    <option value="">------select-------</option>
+					<option>CHAPPATHI+CURRY(VEG/NON)</option>
+					<option>PORATTA+CURRY(VEG/NON)</option>
+					<option>RICE+CURRY</option>
+					<option>PORRIDGE+CURRY</option>
+
+
+				</select>
+                </tr>
+			</td>
+		<tr>
+			<td align="center"><input type="submit" name="fees" value="SUBMIT">
+			
+		 </tr>
+        </form>
+	</table>
+{% endblock %}

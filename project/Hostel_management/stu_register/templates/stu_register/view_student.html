@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+{% extends 'temp/admin.html' %}
+{% block base %}
+
+<body>
+    <div class="container">
+	<h2 align="center">STUDENT DETAILS</h2>
+	<TABLE align="center" border="2">
+		<tr>
+			<td>ID</td>
+			<td>NAME</td>
+			<td>GENDER</td>
+			<td>DEPARTMENT</td>
+			<td>ADDRESS</td>
+			<td>CITY</td>
+			<td>PINCODE</td>
+			<td>STUDENT_PNNO</td>
+			<td>PARENT_ID</td>
+			<td>E-MAIL</td>
+		</tr>
+        {% for i in value %}
+		<tr>
+			<td>{{ i.id }}</td>
+			<td>{{ i.name }}</td>
+			<td>{{ i.gender }}</td>
+			<td>{{ i.department }}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.city }}</td>
+			<td>{{ i.pincode }}</td>
+			<td>{{ i.student_phno }}</td>
+			<td>{{ i.parent_id }}</td>
+			<td>{{ i.e_mail }}</td>
+            <td><a href="{% url 'post_att' idd=i.id %}" class="btn btn-primary">ATTENDANCE</a></td>
+
+		</tr>
+
+        {% endfor%}
+	</TABLE>
+{% endblock %}
+</div>
+</body>
+</html>
+
+
+

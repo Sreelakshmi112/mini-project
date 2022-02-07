@@ -1,0 +1,25 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+
+<body>
+	<h2 align="center">BOOKING </h2>
+	<TABLE align="center" border="1">
+		<tr>
+            <td>ID</td>
+			<td>AVAILABLE ROOM</td>
+{#			<td>STATUS</td>#}
+{#           <td><a href="">BOOK</a></td>#}
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{i.id}}</td>
+            <td>{{i.available_rm}}</td>
+{#            <td>{{ i.status }}</td>#}
+        <td><a href="{% url 'dy_fee' idd=i.id %}">book room</a> </td>
+
+
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+{% endblock %}

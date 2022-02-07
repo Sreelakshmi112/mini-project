@@ -1,0 +1,23 @@
+{% extends 'temp/parent.html' %}
+{% block base %}
+
+
+	<h2 align="center">ATTENDANCE DETAILS</h2>
+	<TABLE align="center" border="1">
+		<tr>
+			<td>ID</td>
+            <td>MONTH</td>
+			<td>DAYS_OF_WORKING</td>
+			<td>ATTENDANCE</td>
+		</tr>
+        {% for i in value %}
+		<tr>
+			<td>{{ i.id }}</td>
+            <td>{{ i.month}}</td>
+			<td>{{ i.working_days}}</td>
+			<td>{{ i.attendance}}</td>
+		</tr>
+        {% endfor %}
+	</TABLE>
+
+{% endblock %}
